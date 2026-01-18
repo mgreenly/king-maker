@@ -17,6 +17,17 @@ When the user asks to "make a commit" or "create a commit", they mean:
 - `jj commit -m "message"` - Create a permanent commit from working-copy changes
 - `jj describe -m "message"` - Update the working-copy description (not what user typically wants)
 
+### Pushing to Main
+This repository lives on the main branch. When the user says "push", they mean:
+1. Update the main bookmark to the latest commit: `jj bookmark set main -r <commit-id>`
+2. Push to GitHub: `jj git push`
+
+Typically after a commit:
+```bash
+jj bookmark set main -r @-  # Move main to parent of working-copy
+jj git push                  # Push to GitHub
+```
+
 ### Key Differences from Git
 - jj automatically tracks changes in a working-copy commit
 - `jj commit` creates a new permanent commit and a new working-copy
