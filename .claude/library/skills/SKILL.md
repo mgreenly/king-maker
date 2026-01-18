@@ -4,6 +4,12 @@
 
 When the user refers to "skills", they mean **skills stored in the `.claude/library/` directory**.
 
+## The `/load` Command
+
+The `/load` command exists to load skills on-demand from `.claude/library/*/SKILL.md`.
+
+Usage: `/load {skill-name}` loads `.claude/library/{skill-name}/SKILL.md` into context.
+
 ## Directory Structure
 
 ### ✅ Correct: `.claude/library/`
